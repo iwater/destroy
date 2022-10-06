@@ -13,9 +13,9 @@
  */
 
 var EventEmitter = require('events').EventEmitter
-var ReadStream = require('fs').ReadStream
+// var ReadStream = require('fs').ReadStream
 var Stream = require('stream')
-var Zlib = require('zlib')
+// var Zlib = require('zlib')
 
 /**
  * Module exports.
@@ -33,13 +33,13 @@ module.exports = destroy
  */
 
 function destroy (stream, suppress) {
-  if (isFsReadStream(stream)) {
-    destroyReadStream(stream)
-  } else if (isZlibStream(stream)) {
-    destroyZlibStream(stream)
-  } else if (hasDestroy(stream)) {
+  // if (isFsReadStream(stream)) {
+  //   destroyReadStream(stream)
+  // } else if (isZlibStream(stream)) {
+  //   destroyZlibStream(stream)
+  // } else if (hasDestroy(stream)) {
     stream.destroy()
-  }
+  // }
 
   if (isEventEmitter(stream) && suppress) {
     stream.removeAllListeners('error')
@@ -160,24 +160,24 @@ function isEventEmitter (val) {
  * @private
  */
 
-function isFsReadStream (stream) {
-  return stream instanceof ReadStream
-}
+// function isFsReadStream (stream) {
+//   return stream instanceof ReadStream
+// }
 
 /**
  * Determine if stream is Zlib stream.
  * @private
  */
 
-function isZlibStream (stream) {
-  return stream instanceof Zlib.Gzip ||
-    stream instanceof Zlib.Gunzip ||
-    stream instanceof Zlib.Deflate ||
-    stream instanceof Zlib.DeflateRaw ||
-    stream instanceof Zlib.Inflate ||
-    stream instanceof Zlib.InflateRaw ||
-    stream instanceof Zlib.Unzip
-}
+// function isZlibStream (stream) {
+//   return stream instanceof Zlib.Gzip ||
+//     stream instanceof Zlib.Gunzip ||
+//     stream instanceof Zlib.Deflate ||
+//     stream instanceof Zlib.DeflateRaw ||
+//     stream instanceof Zlib.Inflate ||
+//     stream instanceof Zlib.InflateRaw ||
+//     stream instanceof Zlib.Unzip
+// }
 
 /**
  * No-op function.

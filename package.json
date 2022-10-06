@@ -1,5 +1,5 @@
 {
-  "name": "destroy",
+  "name": "@iwater/react-native-destroy",
   "description": "destroy a stream if possible",
   "version": "1.2.0",
   "author": {

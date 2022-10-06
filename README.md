@@ -1,10 +1,6 @@
 # destroy
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][github-actions-ci-image]][github-actions-ci-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
+a modified version of destroy module for running in react-native envs
 
 Destroy a stream.
 
@@ -48,16 +44,3 @@ var stream = fs.createReadStream('package.json')
 // ... and later
 destroy(stream)
 ```
-
-[npm-image]: https://img.shields.io/npm/v/destroy.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/destroy
-[github-tag]: http://img.shields.io/github/tag/stream-utils/destroy.svg?style=flat-square
-[github-url]: https://github.com/stream-utils/destroy/tags
-[coveralls-image]: https://img.shields.io/coveralls/stream-utils/destroy.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/stream-utils/destroy?branch=master
-[license-image]: http://img.shields.io/npm/l/destroy.svg?style=flat-square
-[license-url]: LICENSE.md
-[downloads-image]: http://img.shields.io/npm/dm/destroy.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/destroy
-[github-actions-ci-image]: https://img.shields.io/github/workflow/status/stream-utils/destroy/ci/master?label=ci&style=flat-square
-[github-actions-ci-url]: https://github.com/stream-utils/destroy/actions/workflows/ci.yml
