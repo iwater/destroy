@@ -7,6 +7,23 @@ Destroy a stream.
 This module is meant to ensure a stream gets destroyed, handling different APIs
 and Node.js bugs.
 
+## Install
+
+```sh
+$ yarn add @iwater/react-native-destroy
+```
+
+modify metro.config.js
+```js
+module.exports = {
+  resolver: {
+    extraNodeModules: {
+      destroy: require.resolve('@iwater/react-native-destroy'),
+    }
+  },
+};
+```
+
 ## API
 
 ```js
